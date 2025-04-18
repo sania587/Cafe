@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - customer-services
+      - inventory-services
+      - menu-services
+      - order-services
+      - payment-services
+    networks:
+      - cafe-network
+
+  customer-services:
+    build: ./customer-services
+    ports:
+      - "3001:3001"
+    networks:
+      - cafe-network
+
+  inventory-services:
+    build: ./inventory-services
+    ports:
+      - "3002:3002"
+    networks:
+      - cafe-network
+
+  menu-services:
+    build: ./menu-services
+    ports:
+      - "3003:3003"
+    networks:
+      - cafe-network
+
+  order-services:
+    build: ./order-services
+    ports:
+      - "3004:3004"
+    networks:
+      - cafe-network
+
+  payment-services:
+    build: ./payment-services
+    ports:
+      - "3005:3005"
+    networks:
+      - cafe-network
+
+networks:
+  cafe-network:
+    driver: bridge
