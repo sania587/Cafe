@@ -25,41 +25,41 @@ jobs:
       - name: Build and push api-gateway image
         uses: docker/build-push-action@v4
         with:
-          context: ./api-gateway
+          context: Cafe_Management_System/api-gateway
           push: true
           tags: saniazaheer/api-gateway:latest
 
       - name: Build and push customer-services image
         uses: docker/build-push-action@v4
         with:
-          context: ./customer-services
+          context: Cafe_Management_System/customer-services
           push: true
           tags: saniazaheer/customer-services:latest
 
       - name: Build and push inventory-services image
         uses: docker/build-push-action@v4
         with:
-          context: ./inventory-services
+          context: Cafe_Management_System/inventory-services
           push: true
           tags: saniazaheer/inventory-services:latest
 
       - name: Build and push menu-services image
         uses: docker/build-push-action@v4
         with:
-          context: ./menu-services
+          context: Cafe_Management_System/menu-services
           push: true
           tags: saniazaheer/menu-services:latest
 
       - name: Build and push order-services image
         uses: docker/build-push-action@v4
         with:
-          context: ./order-services
+          context: Cafe_Management_System/order-services
           push: true
           tags: saniazaheer/order-services:latest
 
       - name: Build and push payment-services image
         uses: docker/build-push-action@v4
         with:
-          context: ./payment-services
+          context: Cafe_Management_System/payment-services
           push: true
           tags: saniazaheer/payment-services:latest
