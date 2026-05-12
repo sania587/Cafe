@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Cafe_Management_System/api-gateway/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Cafe_Management_System/customer-services/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Cafe_Management_System/inventory-services/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Cafe_Management_System/menu-services/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Cafe_Management_System/order-services/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Cafe_Management_System/payment-services/package.json",
+      "use": "@vercel/node"
+    }
+  ]
+}
+
